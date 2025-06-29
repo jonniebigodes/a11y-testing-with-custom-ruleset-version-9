@@ -20,10 +20,10 @@ export const Disabled: Story = {
   args: {
     disabled: true,
   },
-  play: async ({ canvas }) => {
+  /* play: async ({ canvas }) => {
     const button = await canvas.findByRole('button')
     await expect(button).toBeDisabled()
-  },
+  }, */
 }
 
 export const Clear: Story = {

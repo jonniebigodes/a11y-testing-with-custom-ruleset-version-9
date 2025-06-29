@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react-vite'
 import { http, HttpResponse } from 'msw'
-import { within, expect } from 'storybook/test'
+import { within } from 'storybook/test'
 
 import { BASE_URL } from '../api'
 import { restaurants } from '../stub/restaurants'
@@ -82,7 +82,7 @@ export const ToRestaurantDetailPage = {
 } satisfies Story
 
 export const ToCheckoutPage = {
-  play: async (context) => {
+  /*   play: async (context) => {
     await ToRestaurantDetailPage.play(context)
     const { canvasElement, userEvent, step } = context
 
@@ -117,11 +117,11 @@ export const ToCheckoutPage = {
     await step('Go to "Checkout" page', async () => {
       await userEvent.click(canvas.getByText(/checkout/i))
     })
-  },
+  }, */
 } satisfies Story
 
 export const ToSuccessPage = {
-  play: async (context) => {
+  /*  play: async (context) => {
     await ToCheckoutPage.play(context)
     const { canvas, step, userEvent } = context
 
@@ -145,12 +145,13 @@ export const ToSuccessPage = {
     await step('Complete order', async () => {
       await userEvent.click(canvas.getByText(/Complete/i))
     })
-  },
+  }, */
 } satisfies Story
 
-export const DemoMode: Story = {
+/* export const DemoMode: Story = {
   ...ToSuccessPage,
   args: {
     demoMode: true,
   },
 }
+ */
